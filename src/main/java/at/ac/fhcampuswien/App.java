@@ -7,7 +7,30 @@ public class App {
     //todo Task 1
     public void largestNumber(){
         // input your solution here
+        Scanner scan = new Scanner(System.in);
+        float value;
+        int i = 1;
+        int maxValue;
+
+
+        do {
+            System.out.print("Number " + i + ": ");
+            value = scan.nextFloat();
+            i++;
+        } while (value >0);
+
+        if (value < 0) {
+            // nur erste eingegebene Zahl?
+            System.out.println("No number entered");
+        }
+
+        if (value != 0 || i < 0) {
+            //größte Zahl ausgeben
+        }
+
+
     }
+    //%
 
     //todo Task 2
     public void stairs(){
@@ -16,7 +39,19 @@ public class App {
 
     //todo Task 3
     public void printPyramid(){
-        // input your solution here
+        final int ROWS = 6;
+
+        // jede Zeile 1 mal durchlaufen
+        for (int i = 0; i < ROWS; i++) {
+            //Ausgabe der Leerzeichen
+            for (int j = 0; j < ROWS - 1 - i; j++)
+                System.out.print(" ");
+            //Stern ausgeben
+            for (int k = 0; k < (2 * i) + 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
     //todo Task 4
